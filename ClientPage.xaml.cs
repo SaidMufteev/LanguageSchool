@@ -20,7 +20,7 @@ namespace MufteevLanguage
     /// </summary>
     public partial class ClientPage : Page
     {
-        public ClientPage()
+        public ClientPage()       
         {
             InitializeComponent();
 

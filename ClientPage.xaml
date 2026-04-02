@@ -9,7 +9,7 @@
       Title="ClientPage" FontFamily="Comic Sans MS">
 
     <Grid>
-        <ListView Name="ClientListView">
+        <ListView Name="ClientListView">     
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>

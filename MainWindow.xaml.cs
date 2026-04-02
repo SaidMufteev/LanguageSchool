@@ -24,7 +24,7 @@ namespace MufteevLanguage
         {
             InitializeComponent();
             MainFrame.Navigate(new ClientPage());
-            Manager.MainFrame = MainFrame;
+            Manager.MainFrame = MainFrame;       
         }
     }
 }

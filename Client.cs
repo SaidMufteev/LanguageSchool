@@ -89,7 +89,7 @@ namespace MufteevLanguage
             }
         }
         public string LastVisitDateString
-        {
+        {         
             get
             {
                 if(LastVisitDate.HasValue)
