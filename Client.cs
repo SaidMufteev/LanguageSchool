@@ -88,7 +88,7 @@ namespace MufteevLanguage
                 return null;
             }
         }
-        public string LastVisitDateString
+        public string LastVisitDateString     
         {         
             get
             {

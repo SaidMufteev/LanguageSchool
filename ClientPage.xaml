@@ -10,7 +10,7 @@
 
     <Grid>
         <ListView Name="ClientListView">     
-            <ListView.ItemTemplate>
+            <ListView.ItemTemplate>       
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>

@@ -27,6 +27,6 @@ namespace MufteevLanguage
             var currentClient = MufteevLanguageEntities.GetContext().Client.ToList();
 
             ClientListView.ItemsSource = currentClient;
-        }
+        }    
     }
 }
