@@ -1,0 +1,76 @@
+﻿<Page x:Class="MufteevLanguage.ClientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MufteevLanguage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ClientPage" FontFamily="Comic Sans MS">
+
+    <Grid>
+        <ListView Name="ClientListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <Image Width="140" Grid.Column="0" Grid.RowSpan="5" Stretch="UniformToFill" HorizontalAlignment="Center">
+                            <Image.Source>
+                                <Binding Path="PhotoPath">
+                                    <Binding.TargetNullValue>
+                                        <ImageSource>
+                                            res/school_logo.png
+                                        </ImageSource>
+                                    </Binding.TargetNullValue>
+                                </Binding>
+                            </Image.Source>
+                        </Image>
+                        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                            <TextBlock Text="ID: " FontSize="20"></TextBlock>
+                            <TextBlock Text="{Binding ID}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text=" "></TextBlock>
+                            <TextBlock Text="{Binding FirstName}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text=" "></TextBlock>
+                            <TextBlock Text="{Binding LastName}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text=" "></TextBlock>
+                            <TextBlock Text="{Binding Patronymic}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                            <TextBlock Text="Пол: " FontSize="20"></TextBlock>
+                            <TextBlock Text="{Binding GenderName}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text=" Дата рождения: " FontSize="20"></TextBlock>
+                            <TextBlock Text="{Binding BirthdayString}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+                            <TextBlock Text="Телефон: " FontSize="20"></TextBlock>
+                            <TextBlock Text="{Binding Phone}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text=" e-mail: " FontSize="20"></TextBlock>
+                            <TextBlock Text="{Binding Email}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+                            <TextBlock Text="Дата регистрации:" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text="{Binding RegistrationDateString}" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal">
+                            <TextBlock Text="Дата последнего посещения: " Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text="{Binding LastVisitDateString}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text=" Кол-во посещений: " Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text="{Binding VisitsCount}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
